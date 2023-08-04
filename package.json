@@ -3,13 +3,13 @@
   "_from": "https://github.com/keycodinggood/zeromq.js/archive/refs/tags/offline_v5.3.1.tar.gz",
   "_integrity": "sha512-3h7QFSWvqvYoDZsbbQ/XPaLNvI0pnh7W2SNrCRKi05I0ARALpZfy+lpEt/oSHdW4pcAqHCHLo+vVaiSTejx4Tw==",
   "_resolved": "https://github.com/keycodinggood/zeromq.js/archive/refs/tags/offline_v5.3.1.tar.gz",
-  "version": "https://github.com/keycodinggood/zeromq.js/archive/refs/tags/offline_v5.3.1.tar.gz",
+  "version": "v5.3.1",
   "description": "ZeroMQ for node.js",
   "main": "index",
   "gypfile": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/zeromq/zeromq.js.git"
+    "url": "https://github.com/keycodinggood/zeromq.js.git"
   },
   "dependencies": {
     "nan": "2.17.0",
