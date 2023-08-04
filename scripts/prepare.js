@@ -73,7 +73,9 @@ if (process.platform === "win32") {
     ZMQ +
     ".tar.gz";
   var DIR_NAME = path.join(__dirname, "..", "zmq");
+  var CACHE_DIR_NAME = path.join(__dirname, "..", "cache");
   var FILE_NAME = path.join(DIR_NAME, "zeromq-" + ZMQ + ".tar.gz");
+  var CACHE_FILE_NAME = path.join(CACHE_DIR_NAME, "zeromq-" + ZMQ + ".tar.gz");
 
   if (!fs.existsSync(DIR_NAME)) {
     fs.mkdirSync(DIR_NAME);
@@ -82,6 +84,11 @@ if (process.platform === "win32") {
   if (fs.existsSync(path.join(DIR_NAME, "BUILD_SUCCESS"))) {
     console.log("Libzmq found, skipping rebuild.");
     process.exit(0);
+  }
+
+  if (fs.existsSync(CACHE_FILE_NAME)) {
+    console.log(`copy ${CACHE_FILE_NAME} to ${FILE_NAME}`);
+    fs.copyFileSync(CACHE_FILE_NAME, FILE_NAME)
   }
 
   if (fs.existsSync(FILE_NAME)) {
